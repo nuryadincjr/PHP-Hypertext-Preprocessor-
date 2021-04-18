@@ -7,9 +7,7 @@
     <title>String Function</title>
 </head>
 <body>
-
     <?php
-
     // Fungsi print() digunakan untuk menampilkan string
     print("This is 10 Hello World! string funcition format")
     .'<br>';
@@ -26,7 +24,7 @@
 
     // Fungsi strtoupper() digunakan untuk mengkonversi string ke format huruf besar
     $text="Hello World!";
-    echo "before \"".$text."\" after \"".strtolower($text)."\""
+    echo "before \"".$text."\" after \"".strtoupper($text)."\""
     .'<br>';
 
     // Fungsi ucfirst() digunakan untuk mengkonversi karakter pertama pada string ke format huruf besar
@@ -60,6 +58,5 @@
     .'<br>';
 
     ?>
-    
 </body>
 </html>

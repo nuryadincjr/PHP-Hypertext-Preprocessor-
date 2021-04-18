@@ -11,65 +11,127 @@
     <?php
 
     // arithmetic operators
-    $n=10;
+    echo "<h3>arithmetic operators:</h3>";
+    $x=10;
     $y=4;
-    echo "n=$n, y=$y<br>";
+    echo "x=$x, y=$y<br>";
 
     //Penjumlahan
-    $x=$n+$y;
-    echo "n+y=$x<br>";
+    $n=$x+$y;
+    echo "x+y=$n<br>";
 
     // Pengurangan
-    $x=$n-$y;
-    echo "n-y=$x<br>";
+    $n=$x-$y;
+    echo "x-y=$n<br>";
 
     //Perkalian
-    $x=$n/$y;
-    echo "n/y=$x<br>";
+    $n=$x/$y;
+    echo "x/y=$n<br>";
 
     // Perkalian
-    $x=$n*$y;
-    echo "n*y=$x<br>";
+    $n=$x*$y;
+    echo "x*y=$n<br>";
 
     // Hasil bagi
-    $x=$n%$y;
-    echo "n%y=$x<br>";
+    $n=$x%$y;
+    echo "x%y=$n<br>";
 
     // Increment
-    $x=$n;
-    $x++;
-    echo "x=$n, x++ =$x<br>";
+    echo ($x++) . "++=$x<br>";
 
     // Decrement
-    $x=$n;
-    $x--;
-    echo "x=$n, x-- =$x<br>";
+    echo ($x--) . "--=$x";
+
+
 
     // comparison operators
+    echo "<h3>comparison operators:</h3>";
+    echo "$x == $y<br>". var_dump($x == $y);
+    echo "$x != $y<br>". var_dump($x != $y);
+    echo "$x <> $y<br>". var_dump($x <> $y);
+    echo "$x > $y<br>". var_dump($x > $y);
+    echo "$x < $y<br>". var_dump($x < $y);
+    echo "$x >= $y<br>". var_dump($x >= $y);
+    echo "$x <= $y<br>". var_dump($x <= $y);
+    // Implementation
+    $password='12345';
+    if ($password == '12345') {
+        echo "Login sukses!";
+    } else {
+        echo "Login gagal!";
+    }
+
+
     // assignment operators
+    echo "<h3>assignment operators:</h3>";
+    /* nilai variabel x akan berubah ubah karna x hanya di deklarasikan satu kali
+    tergantung dari oprator dibawahnya yang mengeksekusi nilai x*/
+    // =
+    $x = 10;  
+    echo "x = ".$x."<br>";
+
+    // +=
+    $x += 10;  
+    echo "x += ".$x."<br>";
+
+    // -=
+    $x -= 10;  
+    echo "x -= ".$x."<br>";
+
+    // *=
+    $x *= 10;  
+    echo "x *= ".$x."<br>";
+
+    // /=
+    $x /= 10;  
+    echo "x /= ".$x."<br>";
+
+    // .=
+    $x .= 10;  
+    echo "x .= ".$x."<br>";
+
+    // %=
+    $x %= 10;  
+    echo "x %= ".$x."<br>";
 
 
-    
     // logical operators
-    // And &&
-    $banding = 3;
-    if ($n && $y < $banding)
-        echo "$n dan $y < $banding<br>";
-    else
-        echo "$n dan $y > $banding<br>";
+    echo "<h3>Logical operators:</h3>";
+    // and jika semua sarat terpenuhi
+    $username='admin';
+    $password='12345';
+    if ($username == 'admin' && $password == '12345') {
+        echo "Login sukses!<br>";
+    } else {
+        echo "Login gagal!<br>";
+    }
 
-    // Or ||
-    $banding = 5;
-    if ($n || $y < $banding)
-        echo "$n atau $y < $banding<br>";
-    else
-        echo "$n dan $y > $banding<br>";
-    // Not !
-    $banding = 5;
-    if ($n != $y < $banding)
-        echo "$n tidak sama dengan $y <br>";
-    else
-        echo "$n tidak sama dengan $y <br>";
+    // or jika ada salah satu yang memenuhi sarat
+    $username='admin';
+    $password='12345678';
+    if ($username == 'admin' || $password == '12345') {
+        echo "Login sukses!<br>";
+    } else {
+        echo "Login gagal!<br>";
+    }
+
+    // not jika inputan tidak sama dengan syarat
+    $username='user';
+    $password='12345678';
+    if ($username != 'admin') {
+        echo "Login as User<br>";
+    } else {
+        echo "Login as Admin<br>";
+    }
+
+    // xor jika ada salah satu yang memenuhi sarat, namun tidak keduanya
+    $username='admin';
+    $password='12345';
+    if ($username == 'admin' xor $password == '12345') {
+        echo "Login sukses!<br>";
+    } else {
+        echo "Login gagal!<br>";
+    }
 
     ?>
     
